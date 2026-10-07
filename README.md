@@ -1,6 +1,6 @@
 # Deccansoft Agent Bundle
 
-The org-level agent configuration from Deccansoft SDLC v2: the **central standards repo** that every project installs from. It is changed only by the Platform/Standards Owner, through PRs, and released as SemVer tags (`v2.1.1`).
+The org-level agent configuration from Deccansoft SDLC v2: the **central standards repo** that every project installs from. It is changed only by the Platform/Standards Owner, through PRs, and released as SemVer tags (`v2.1.2`).
 
 | Layer | Contents | Path |
 |---|---|---|
@@ -17,7 +17,7 @@ Run all three steps from the project root.
 
 ```sh
 # 1. Skills, for both harnesses (writes skills-lock.json; commit it)
-DISABLE_TELEMETRY=1 npx skills add DeccansoftAITeam/agent-bundle#v2.1.1 \
+DISABLE_TELEMETRY=1 npx skills add DeccansoftAITeam/agent-bundle#v2.1.2 \
   --skill '*' -a claude-code -a github-copilot --copy -y
 #    Claude Code → .claude/skills/     GitHub Copilot → .agents/skills/
 
@@ -27,7 +27,7 @@ claude plugin install deccansoft-org@deccansoft
 #    or inside a session: /plugin marketplace add … then /plugin install …
 
 # 3. Org rules, MCP allow-list, Copilot subagents + Copilot audit hook
-git clone --depth 1 --branch v2.1.1 https://github.com/DeccansoftAITeam/agent-bundle /tmp/agent-bundle
+git clone --depth 1 --branch v2.1.2 https://github.com/DeccansoftAITeam/agent-bundle /tmp/agent-bundle
 python /tmp/agent-bundle/scripts/install.py .
 ```
 
