@@ -5,7 +5,8 @@ Copies into the target project repo:
   org/org-rules.md, org/mcp-allowlist.yml  -> .agents/org/                (L1, L5: both harnesses)
   hooks/audit_log.py                       -> .agents/hooks/              (Copilot hook target)
   copilot/agents/*.agent.md                -> .github/agents/             (Copilot subagents)
-  copilot/hooks/audit.json                 -> .github/hooks/              (Copilot audit hook)
+  hooks/scope_guard.py                     -> .agents/hooks/              (Copilot hook target)
+  copilot/hooks/*.json                     -> .github/hooks/              (Copilot audit + scope hooks)
 and writes .agents/bundle.lock (bundle version + commit) for the conformance drift check.
 
 Skills:            npx skills add DeccansoftAITeam/agent-bundle#v<version> ...
@@ -28,7 +29,9 @@ MAP = [
     ("org/org-rules.md", ".agents/org/org-rules.md"),
     ("org/mcp-allowlist.yml", ".agents/mcp-allowlist.yml"),
     ("hooks/audit_log.py", ".agents/hooks/audit_log.py"),
+    ("hooks/scope_guard.py", ".agents/hooks/scope_guard.py"),
     ("copilot/hooks/audit.json", ".github/hooks/audit.json"),
+    ("copilot/hooks/scope-guard.json", ".github/hooks/scope-guard.json"),
 ]
 
 
