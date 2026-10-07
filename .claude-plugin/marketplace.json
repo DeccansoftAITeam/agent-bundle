@@ -1,0 +1,15 @@
+{
+  "name": "deccansoft",
+  "description": "Deccansoft org marketplace: the SDLC v2 agent bundle",
+  "owner": {
+    "name": "Deccansoft Platform/Standards Owner"
+  },
+  "plugins": [
+    {
+      "name": "deccansoft-org",
+      "source": "./",
+      "description": "Deccansoft SDLC v2 org bundle (skills, reviewer subagents, audit hook)",
+      "version": "2.0.0"
+    }
+  ]
+}
