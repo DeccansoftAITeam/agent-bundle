@@ -13,7 +13,20 @@ description: Implements one approved tasks.md item acceptance-test-first. Writes
 
 ## Phase 0: activate the scope guard
 
-Create `.agents/progress/<task-id>.md` with sections `## Objective`, `## Files in scope` (copy every path from the task as a list item in backticks, e.g. `- \`backend/app/features/sla/**\``), `## Done`, `## Pending`, `## Decisions`, `## Blockers`. Then write the task id to `.agents/progress/ACTIVE`. From now on the `scope_guard` hook **blocks** edits outside that list. If you hit a block, don't work around it: stop and ask. When the task's PR is opened, delete `ACTIVE`.
+Create `.agents/progress/<task-id>.md` with these sections, copying every path from the task's "Files in scope" as a list item in backticks:
+
+```markdown
+## Objective
+## Files in scope
+- `backend/app/features/sla/sweep.py`
+- `backend/tests/features/sla/**`
+## Done
+## Pending
+## Decisions
+## Blockers
+```
+
+Then write the task id to `.agents/progress/ACTIVE`. From now on the `scope_guard` hook **blocks** edits outside that list. If you hit a block, don't work around it: stop and ask. When the task's PR is opened, delete `ACTIVE`.
 
 ## Phase A: acceptance tests (then STOP)
 

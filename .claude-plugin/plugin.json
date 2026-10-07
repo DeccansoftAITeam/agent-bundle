@@ -1,6 +1,6 @@
 {
   "name": "deccansoft-org",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Deccansoft SDLC v2 org bundle: grill, spec-draft, acceptance-tdd, migration-writer, test-generator skills; code-reviewer and security-reviewer subagents; agent audit hook.",
   "author": { "name": "Deccansoft Platform/Standards Owner" },
   "repository": "https://github.com/DeccansoftAITeam/agent-bundle",
